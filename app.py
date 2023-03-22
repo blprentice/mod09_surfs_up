@@ -31,19 +31,25 @@ app = Flask(__name__)
 # Add routing information for each of the other routes
 def welcome():
     return(
-
     '''
-
-    Welcome to the Claimate Analysis API!
-
-    Available Routes:
-
-    /api/v1.0/precipitation
-
-    /api/v1.0/stations
-
-    /api/v1.0/tobs
-
+    Welcome to the Climate Analysis API!\n
+    Available Routes:\n
+    /api/v1.0/precipitation\n
+    /api/v1.0/stations\n
+    /api/v1.0/tobs\n
     /api/v1.0/temp/start/end
-
     ''')
+
+# Create precipitation route
+@app.route("/api/v1.0/precipitation")
+
+def precipitation():
+
+    prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+
+    precipitation = session.query(Measurement.date, Measurement.prcp).\
+        filter(Measurement.date >= prev_year).all()
+    
+    precip = {date: prcp for date, prcp in precipitation}
+        
+    return jsonify(precip)
