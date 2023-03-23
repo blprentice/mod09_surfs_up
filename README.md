@@ -50,7 +50,7 @@ Based on the temperature statistics, it appears that a surfing and ice cream sho
 
 Returning to one of the risks mentioned above (that temperature data may not be enough), there are two additonal queries we could run that would make this analysis all the more valuable to W. Avy:
 
-* A query of precipitation levels in June and December would provide insight into whether surfing and ice cream really do make sense at both times of the year. If December has higher precipiation levels, that could put a damper (pun absolutely intended) on investing in the shop. The query would look something like this:
+* A query of precipitation levels in June and December would provide insight into whether surfing and ice cream really do make sense at both times of the year. If December has higher precipitation levels, that could put a damper (pun absolutely intended) on investing in the shop. The query would look something like this:
 
 `june_prcp = []
 june_prcp = session.query(Measurement.prcp).filter(extract('month', Measurement.date) == '06').all()`
