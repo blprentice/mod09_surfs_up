@@ -59,3 +59,9 @@ Returning to one of the risks mentioned above (that temperature data may not be 
 
 `sept_temps = []`  
 `sept_temps = session.query(Measurement.tobs).filter(extract('month', Measurement.date) == '09').all()`
+
+### Acknowledgements
+
+Part of the code for Deliverable 1, # 1 came from the following page on [stackoverflow](https://stackoverflow.com/questions/23629590/using-sqlalchemy-to-filter-by-day-in-a-date-field)
+
+
