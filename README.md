@@ -32,9 +32,9 @@
 
 The summary statistics for June and December:
 
-![June Temperature Statistics](june_temp_stats.png)
+![June Temperature Statistics](challenge/june_temp_stats.png)
 
-![December Temperature Statistics](dec_temp_stats.png)
+![December Temperature Statistics](challenge/dec_temp_stats.png)
 
 **Major Points**
 
